@@ -4,6 +4,6 @@ Version: 0.2
 phases:
   build:
     commands:
-       - "aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 370416136397.dkr.ecr.us-east-2.amazonaws.com  && docker build -t applicaion/bookshelf ./AWS-CodeBuild/  && docker tag application/bookshelf:latest 370416136397.dkr.ecr.us-east-2.amazonaws.com/application/bookshelf:latest  && docker push 370416136397.dkr.ecr.us-east-2.amazonaws.com/application/bookshelf:latest"
+       - "aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 370416136397.dkr.ecr.us-east-2.amazonaws.com  && docker build -t applicaion/bookshelf -f ./AWS-CodeBuild/  && docker tag application/bookshelf:latest 370416136397.dkr.ecr.us-east-2.amazonaws.com/application/bookshelf:latest  && docker push 370416136397.dkr.ecr.us-east-2.amazonaws.com/application/bookshelf:latest"
       
         
